@@ -18,8 +18,7 @@ cabecalho      | TRUE              | Informa se a planilha possui ou não cabeç
 xn1 = (x – Min(X)) / (Max(X) – Min(X)) * 2 – 1
 
 ## Dados de exemplo: DiabetesDiagnosis.csv
-Planilha contendo diversos dados coletados em pacientes, incluindo o diagnóstico para diabetes. A planilha está na base de dados
-><http://www.technologyforge.net/Datasets>
+Planilha contendo diversos dados coletados em pacientes, incluindo o diagnóstico para diabetes. A planilha está na base de dados <http://www.technologyforge.net/Datasets>
 
 Referência da planilha de exemplo:
 >Smith, J. W., Everhart, J. E., Dickson, W. C., Knowler, W. C., Johannes, R. S. (1988), Using the ADAP learning algorithm to forecast the onset of diabetes mellitus. Proceedings of the Symposium on Computer Applications and Medical Care (pp. 261—265), IEEE Computer Society Press.
