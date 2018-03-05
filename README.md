@@ -15,7 +15,7 @@ maximo         | 1                 | Valor máximo do intervalo usado na fórmul
 cabecalho      | TRUE              | Informa se a planilha possui ou não cabeçalho
 
 ## Fórmula de normalização utilizada:
-(x-min)/(max-min)
+x'=(x-min)/(max-min)
 
 ## Dados de exemplo: DiabetesDiagnosis.csv
 Planilha contendo diversos dados coletados em pacientes, incluindo o diagnóstico para diabetes. A planilha está na base de dados
