@@ -14,8 +14,9 @@ minimo         | 0                 | Valor mínimo do intervalo usado na fórmul
 maximo         | 1                 | Valor máximo do intervalo usado na fórmula de normalização
 cabecalho      | TRUE              | Informa se a planilha possui ou não cabeçalho
 
-## Fórmula de normalização utilizada:
-xn1 = (x – Min(X)) / (Max(X) – Min(X)) * 2 – 1
+## Fórmula de normalização utilizada (MaxMin):
+xn1 = (x – Min(X)) / (Max(X) – Min(X)) * ((novoMax-novoMin)-novoMin) </br>
+onde, novoMax é o parâmetro máximo e novoMin é o parâmetro mínimo
 
 ## Dados de exemplo: DiabetesDiagnosis.csv
 Planilha contendo diversos dados coletados em pacientes, incluindo o diagnóstico para diabetes. A planilha está na base de dados (<http://www.technologyforge.net/Datasets>).
