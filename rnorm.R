@@ -7,16 +7,15 @@
 ### ---------------------------------------------------------------------------
 
 # Selecionando o diretorio raiz para o script
-setwd("C:/Users/Ricardo/Documents/SITE_POSTS/Funcao_Normalizacao_no_R/rnorm")
+#setwd("C:/Users/Ricardo/Documents/SITE_POSTS/Funcao_Normalizacao_no_R/rnorm")
 
 # Endereço da planilha a ser normalizada, ou apenas o nome do arquivo se estiver no mesmo diretório
-endereco<-"data/DiabetesDiagnosis.csv"
+#endereco<-"data/DiabetesDiagnosis.csv"
 
 # Construindo a função
 rnorm<-function(nome_arquivo, minimo=0, maximo=1, cabecalho=TRUE) {
   if(file.exists(nome_arquivo)){
     planilha <- read.table(nome_arquivo, header=cabecalho, sep=",", stringsAsFactors=FALSE)
-    #planilha <- read.table("DiabetesDiagnosis.csv", header=TRUE, sep=",", stringsAsFactors=FALSE)  
   }else{stop("Planilha inexistente")} # Comandos para parar a função: stop("") ou return(-1)
   for(i in 1:ncol(planilha)){
     if(is.numeric(planilha[,i])){
@@ -27,10 +26,9 @@ rnorm<-function(nome_arquivo, minimo=0, maximo=1, cabecalho=TRUE) {
       }
     }
   }
-  # Retornando a planilha normalizada
-  return(planilha)
+  return(planilha) # Retornando a planilha normalizada
 }
 
 # Execuando a função e salvando o resultado em "resultado"
-resultado<-rnorm(endereco)
+#resultado<-rnorm(endereco)
 
