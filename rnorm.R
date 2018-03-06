@@ -23,7 +23,7 @@ rnorm<-function(nome_arquivo, minimo=0, maximo=1, cabecalho=TRUE) {
       v_min<-min(planilha[,i])
       v_max<-max(planilha[,i])
       for(j in 1:nrow(planilha)){
-        planilha[j,i]<-((planilha[j,i]-v_min)/(v_max-v_min))*((maximo-minimo)+minimo))
+        planilha[j,i]<-((planilha[j,i]-v_min)/(v_max-v_min))*((maximo-minimo)+minimo)
       }
     }
   }
