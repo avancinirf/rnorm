@@ -1,22 +1,22 @@
 
 ### ---------------------------------------------------------------------------
-### TÃ­tulo: FunÃ§Ã£o para normalizaÃ§Ã£o de planilhas em R
+### Título: Função para normalização de planilhas em R
 ### Autor: Ricardo Avancini
 ### e-mail: avancini.rf@gmail.com
-### RepositÃ³rio: https://github.com/avancinirf/rnorm
+### Repositório: https://github.com/avancinirf/rnorm
 ### ---------------------------------------------------------------------------
 
 # Selecionando o diretorio raiz para o script
 #setwd("C:/Users/Ricardo/Documents/SITE_POSTS/Funcao_Normalizacao_no_R/rnorm")
 
-# EndereÃ§o da planilha a ser normalizada, ou apenas o nome do arquivo se estiver no mesmo diretÃ³rio
+# Endereço da planilha a ser normalizada, ou apenas o nome do arquivo se estiver no mesmo diretório
 #endereco<-"data/DiabetesDiagnosis.csv"
 
-# Construindo a funÃ§Ã£o
+# Construindo a função
 rnorm<-function(nome_arquivo, minimo=0, maximo=1, cabecalho=TRUE) {
   if(file.exists(nome_arquivo)){
     planilha <- read.table(nome_arquivo, header=cabecalho, sep=",", stringsAsFactors=FALSE)
-  }else{stop("Planilha inexistente")} # Comandos para parar a funÃ§Ã£o: stop("") ou return(-1)
+  }else{stop("Planilha inexistente")} # Comandos para parar a função: stop("") ou return(-1)
   for(i in 1:ncol(planilha)){
     if(is.numeric(planilha[,i])){
       v_min<-min(planilha[,i])
@@ -29,6 +29,8 @@ rnorm<-function(nome_arquivo, minimo=0, maximo=1, cabecalho=TRUE) {
   return(planilha) # Retornando a planilha normalizada
 }
 
-# Execuando a funÃ§Ã£o e salvando o resultado em "resultado"
+# Execuando a função e salvando o resultado em "resultado"
 #resultado<-rnorm(endereco)
+
+
 
